@@ -65,7 +65,7 @@ A partir da porta 8888 do localhost ou do endereço http://0.0.0.0:8888/ é poss
       }
 
 
-Para o desenvolvimento do projeto foi utilizada a linguagem de programação Kotlin e o framework Ktor. Para compilação, utilizou-se o Gradle com o Java JDK 1.8. Além disso, foram utilizadas as seguintes dependências do framework Ktor:
+Para o desenvolvimento do projeto foi utilizada a linguagem de programação Kotlin, além, dos framework's Ktor(desenvolvimento back-end) e Kodein(injeção de dependências). Além disso, foram utilizadas as seguintes dependências do framework Ktor:
 
     io.ktor:ktor-server-core
     io.ktor:ktor-gson
@@ -78,3 +78,5 @@ Outras dependências utilizadas:
     org.kodein.di:kodein-di-generic-jvm
     org.jetbrains.kotlinx
     ch.qos.logback:logback-classic
+
+Para compilação utilizando o Gradle, é necessário ter o Java JDK 1.8 instalado(pode ser instalado por meio deste link: https://www.oracle.com/br/java/technologies/javase/javase-jdk8-downloads.html). Para compilar o projeto, abra a Linha de Comando e navegue até a raiz do projeto e execute o comando gradlew(Windows) ou ./gradlew(Mac ou Linux) para fazer build do projeto via gradle. Após a conclusão do build do projeto, execute o comando gradlew run(Windows) ou ./gradlew run(Mac ou Linux) para iniciar o servidor.
