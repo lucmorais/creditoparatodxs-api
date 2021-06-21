@@ -79,5 +79,5 @@ A partir da porta 8888 do localhost ou do endereço http://0.0.0.0:8888/ é poss
     GET - /contract/show - Mostra o contrato vinculado ao CPF inserido para consulta. Deve ser informado o dado exemplificado abaixo em um objeto do formato JSON:
     
       {
-          cpfCliente: "55557777333"   
+          cpfClient: "55557777333"   
       }
