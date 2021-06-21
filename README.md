@@ -59,15 +59,14 @@ Para o desenvolvimento do projeto foi utilizada a linguagem de programação Kot
 
     io.ktor:ktor-server-core
     io.ktor:ktor-gson
-    io.ktor:ktor-server-netty
     io.ktor:ktor-html-builder
-    ch.qos.logback:logback-classic
+    io.ktor:ktor-auth
+    io.ktor:ktor-server-sessions
+    io.ktor:ktor-server-netty
     io.ktor:ktor-server-tests
+    
+Outras dependências utilizadas:
 
-Outras bibliotecas utilizadas:
-
-    Jsoup - Versão 1.11.3
-    Selenium-Java - Versão 3.141.59
-    Selenium-Crhome-Driver - Versão 3.141.59
-    Kotlin-Statistics - Versão 1.2.1
-    Krangl - Versão 0.16.2
+    org.kodein.di:kodein-di-generic-jvm
+    org.jetbrains.kotlinx
+    ch.qos.logback:logback-classic
