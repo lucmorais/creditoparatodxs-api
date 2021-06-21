@@ -9,6 +9,7 @@ import java.util.*
 class ContractService(private val contractRepository: ContractRepository, private val resumeSimulationRepository: ResumeSimulationRepository) {
     fun setResumeSimulation(contract: Contract): Contract? {
         var resume = contract.cpfClient?.let { resumeSimulationRepository.getResumeSimulation(it) }
+
         return if (resume != null) {
             contract.resumeSimulation = resume
             contract
@@ -18,9 +19,9 @@ class ContractService(private val contractRepository: ContractRepository, privat
     }
 
     fun startDateContract(contract: Contract): Contract? {
-        return if(contract.signatureFirstLastName != null) {
+        return if (contract.signatureFirstLastName != null) {
             val date: Date = Date()
-            contract.signatureDate = date.date
+            contract.signatureDate = date.date.toString() + date.month.toString() + date.year.toString()
             addContract(contract)
             contract
         }else {
@@ -29,7 +30,7 @@ class ContractService(private val contractRepository: ContractRepository, privat
     }
 
     private fun addContract(contract: Contract) {
-        if(contract.cpfClient?.let { contractRepository.findContract(it) } == null) {
+        if (contract.cpfClient?.let { contractRepository.findContract(it) } == null) {
             contractRepository.addListContracts(contract)
         }
     }

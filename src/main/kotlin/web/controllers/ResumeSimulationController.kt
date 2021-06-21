@@ -12,13 +12,14 @@ import io.ktor.response.*
 
 class ResumeSimulationController(private val resumeSimulationRepository: ResumeSimulationRepository) {
     suspend fun showResume(ctx: ApplicationCall) {
-        ctx.receive<Query>().apply {
+        ctx.receive<Query>().apply post@{
             var resume = this.cpfClient?.let { resumeSimulationRepository.getResumeSimulation(it) }
 
             if (resume != null) {
                 ctx.respond(resume)
             }else {
-                ctx.respond(HttpStatusCode.BadRequest, "NÃO TEM SIMULAÇÃO CADASTRADA")
+                ctx.respond(HttpStatusCode.BadRequest, "Não tem cadastro de uma simulação de Crédito Pessoal para este CPF em nosso sistema")
+                return@post
             }
         }
     }

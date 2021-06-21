@@ -14,7 +14,7 @@ class ContractController(private val contractService: ContractService, private v
         ctx.receive<Contract>().apply {
             contractService.setResumeSimulation(this).apply post@{
                 if (this == null) {
-                    ctx.respond(HttpStatusCode.BadRequest, "Não foi encontrada uma simulação de crédito aprovada para este CPF, portanto, não foi possivel firmar o contrato de contratação")
+                    ctx.respond(HttpStatusCode.BadRequest, "Não foi encontrada uma simulação de Crédito Pessoal aprovada para este CPF em nosso sistema, portanto não foi possivel firmar o contrato de contratação")
                     return@post
                 }else {
                     contractService.startDateContract(this)
@@ -23,14 +23,16 @@ class ContractController(private val contractService: ContractService, private v
             }
         }
     }
+
     suspend fun show(ctx: ApplicationCall) {
         ctx.receive<Query>().apply {
             this.cpfClient?.let {
-                contractRepository.findContract(it).apply {
-                    if(this != null) {
+                contractRepository.findContract(it).apply post@{
+                    if (this != null) {
                         ctx.respond(this)
                     }else {
                         ctx.respond(HttpStatusCode.BadRequest, "Não foi encontrado um contrato registrado neste CPF")
+                        return@post
                     }
                 }
             }

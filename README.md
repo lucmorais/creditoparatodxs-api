@@ -63,7 +63,7 @@ A partir da porta 8888 do localhost ou do endereço http://0.0.0.0:8888/ é poss
     GET - /resume - Mostra o detalhamento de uma simulação cadastrada. Deve ser informado o dado exemplificado abaixo em um objetodo formato JSON:
     
       {
-          cpfCliente: "55557777333"   
+          cpfClient: "55557777333"   
       }
 
 
