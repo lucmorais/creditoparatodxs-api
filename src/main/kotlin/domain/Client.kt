@@ -10,6 +10,5 @@ data class Client(
     var mail: String? = null,
     var cellNumber: String? = null,
     var incomeMonthly: Float? = null,
-    var profession: String? = null,
-    var address: MutableList<Address> = mutableListOf()
+    var profession: String? = null
 )
