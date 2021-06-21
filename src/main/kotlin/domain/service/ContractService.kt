@@ -28,10 +28,6 @@ class ContractService(private val contractRepository: ContractRepository, privat
         }
     }
 
-    fun getContract(contract: Contract): Contract? {
-        return contract.cpfClient?.let { contractRepository.findContract(it) }
-    }
-
     private fun addContract(contract: Contract) {
         if(contract.cpfClient?.let { contractRepository.findContract(it) } == null) {
             contractRepository.addListContracts(contract)

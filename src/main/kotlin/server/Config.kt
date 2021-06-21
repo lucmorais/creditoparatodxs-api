@@ -30,7 +30,7 @@ object Config {
         bind() from singleton { ResumeSimulationRepository() }
     }
     private val contractModule = Kodein.Module("CONTRACT"){
-        bind() from singleton { ContractController(instance()) }
+        bind() from singleton { ContractController(instance(), instance()) }
         bind() from singleton { ContractService(instance(), instance()) }
         bind() from singleton { ContractRepository() }
     }

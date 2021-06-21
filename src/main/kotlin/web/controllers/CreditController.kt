@@ -16,7 +16,7 @@ class CreditController(private val creditService: CreditService) {
                     return@post
 
                 }else {
-                    ctx.respond(HttpStatusCode.OK, "Segue abaixo o resumo do Crédito Pessoal cadastrado na simulação")
+                    ctx.respond(this)
                 }
             }
         }
