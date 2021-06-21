@@ -1,13 +1,15 @@
 # creditoparatodxs-api
  
-API para Análise de Preços de Combustíveis
+API que permite o cliente contratar um Crédito Pessoal.
 
 Esta API tem as seguintes funcionalidades: 
     
+    Cadastra o cliente;
     Lista as ofertas de Crédito Pessoal;
-    Detalhe a oferta do usuário ao momento de escolha;
-    Apresente a revisão das informações;
-    E permita-o realizar a contratação;
+    Cadastra a oferta de Crédito Pessoal
+    Detalha a oferta do usuário ao momento de escolha;
+    Apresenta a revisão das informações da simulação;
+    Permite que o cliente realize a contratação;
 
 
 A partir da porta 8888 do localhost ou do endereço http://0.0.0.0:8888/ é possivel acessar a raiz da API
