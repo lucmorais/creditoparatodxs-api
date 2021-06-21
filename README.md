@@ -18,7 +18,7 @@ Outras dependências utilizadas:
 
 É necessário ter o **Java JDK 1.8** instalado para compilar o projeto. Pode ser instalado por meio deste link: https://www.oracle.com/br/java/technologies/javase/javase-jdk8-downloads.html
 
-Para compilar o projeto, abra a Linha de Comando, navegue até a raiz do projeto e execute o comando **gradlew** (Windows) ou **./gradlew** (Mac ou Linux) para fazer build do projeto via gradle. Após a conclusão do build, execute o comando **gradlew run** (Windows) ou **./gradlew** run(Mac ou Linux) para iniciar o servidor.
+Para compilar o projeto, abra a Linha de Comando, navegue até a raiz do projeto e execute o comando **gradlew** (Windows) ou **./gradlew** (Mac ou Linux) para fazer build do projeto via gradle. Após a conclusão do build, execute o comando **gradlew run** (Windows) ou **./gradlew run** (Mac ou Linux) para iniciar o servidor.
 
 Esta API tem as seguintes funcionalidades: 
     
