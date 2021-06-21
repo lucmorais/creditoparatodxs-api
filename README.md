@@ -50,8 +50,8 @@ A partir da porta 8888 do localhost ou do endereço http://0.0.0.0:8888/ é poss
     Permite cadastrar o contrato da oferta de crédito enviada pelo cliente. Devem ser informados os dados exemplificados abaixo em um objeto do formato JSON:
 
       {
-          regiao: "CO",
-          siglaEstado: "DF"
+          signatureFirstLastName: "teste do teste",
+          cpfClient: "55557777333"
       }
 
 
