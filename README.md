@@ -5,9 +5,9 @@ API que permite o cliente contratar um Crédito Pessoal.
 Esta API tem as seguintes funcionalidades: 
     
     Cadastra o cliente;
-    Lista as ofertas de Crédito Pessoal;
+    Lista a oferta de Crédito Pessoal;
     Cadastra a oferta de Crédito Pessoal;
-    Detalha a oferta do usuário ao momento de escolha;
+    Detalha a oferta do cliente ao momento de escolha;
     Apresenta a revisão das informações da simulação;
     Permite que o cliente realize a contratação;
 
@@ -42,7 +42,7 @@ A partir da porta 8888 do localhost ou do endereço http://0.0.0.0:8888/ é poss
           goal: "Reforma da casa"
       } 
 
-    GET - /resume - Mostrar o detalhamento de uma simulação cadastrada. Deve ser informado o dado exemplificado abaixo em um objetodo formato JSON:
+    GET - /resume - Mostra o detalhamento de uma simulação cadastrada. Deve ser informado o dado exemplificado abaixo em um objetodo formato JSON:
     
       {
           cpfCliente: "55557777333"   
