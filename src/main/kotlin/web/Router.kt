@@ -44,10 +44,10 @@ fun Route.credit(creditController: CreditController) {
             call.respondHtml {
                 body {
                     h1 { +"Crédito Para Todxs" }
-                    strong { +"Detalhes do crédito"}
+                    p { +"Detalhes do crédito"}
                     h3 {+"Valor do crédito: de R$ 2.000,00 até R$ 30.000,00"}
                     h3 {+"Parcelas: 12, 24 ou 36 vezes"}
-                    h3 {+"Juros: 4,1%"}
+                    h3 {+"Juros: 0,8%"}
                 }
             }
         }
